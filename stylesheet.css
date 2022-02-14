@@ -16,7 +16,7 @@ body{
 
 .main-header{
     letter-spacing: .18rem; 
-    font-size: 50px;
+    font-size: 51px;
 }
 .head{
     /* Both of these are needed to keep the #menu-toggle visible when nav list is active / open. */
