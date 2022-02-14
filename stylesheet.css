@@ -15,18 +15,18 @@ body{
 
 
 .main-header{
-    letter-spacing: .18rem; /*띄어주기!*/
+    letter-spacing: .18rem; 
     font-size: 50px;
 }
 .head{
     /* Both of these are needed to keep the #menu-toggle visible when nav list is active / open. */
-    position: relative; /*원래 있던 위치를 기준으로 좌표를 지정*/
+    position: relative; /*positioned according to the normal flow of the document*/
     z-index: 1000; /*higher z-index shows at front*/
     /********************************/
     top: 0;
     left: 0;
     width: 100%;
-    align-items: baseline; /*head class안의 item들을 정렬(header와 메뉴바 줄 맞추기*/
+    align-items: baseline; /*organize items in head class(header and menu bar)*/
     display: flex;
     justify-content: space-between;
 }
@@ -44,9 +44,9 @@ body{
 
 .menu div{
     background-color:whitesmoke;
-    border-radius: 25px; /*둥글기*/
+    border-radius: 25px; 
     box-shadow: 0px 3px 13px rgba(0,0,0,.3);
-    height: 7px; /*bar들의 높이*/
+    height: 7px; /*height of the bars*/
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(.13,.24,.35,1.64);
 }
@@ -83,12 +83,12 @@ body{
     position: absolute;
     top: 0;
     height: 100vh;
-    width: 0vw; /*메뉴를 안눌렀을땐 안보여야함*/
+    width: 0vw; /*menu list should not be appeared when it's not 'active'*/
     transition: all 100ms ease-in-out 300ms;
 }
 
 .menu_list::before{
-    left: 0; /*left-element를 left로 붙이기*/
+    left: 0; /*there should no no space between end of the page and left-element*/
 }
 .menu_list::after{
     right: 0;
@@ -98,7 +98,7 @@ body{
     position: absolute;
     top: -50%;
     left: 50%;
-    transform: translate(-50%,-50%); /*딱 중앙으로 내려옴*/
+    transform: translate(-50%,-50%); /*menu list comes down on the middle*/
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
     z-index: 2000;
@@ -128,7 +128,7 @@ body{
 .menu.active .two{
     background-color: transparent;
     box-shadow: none;
-    transform: translateX(-55px); /*옆으로슉*/
+    transform: translateX(-55px); /*move to negative x side!*/
 }
 
 .menu.active .three{
@@ -145,16 +145,16 @@ body{
     transform: translate(-50%,-50%);
     transition-delay: 560ms;
     transition-duration: 240ms;
-    transition-timing-function: cubic-bezier(.1, .2, .3, 1.4);/*튕기는 효과*/
+    transition-timing-function: cubic-bezier(.1, .2, .3, 1.4);/*special effect*/
 }
 
 .menu_list.active a{
     transition-delay: 600ms;
-    opacity: 1; /*0으로 돼있었으니까 바꿔줘야지!*/
+    opacity: 1; /*needs to be appeared*/
 }
 
 .wrapper.active p{
-    color:cornflowerblue; /*메뉴가 열렸을때 배경색이랑 같아지면서 안보이게!*/
+    color:cornflowerblue; /*needs to be same color as background so that it looks like it disappeared*/
     transition-delay: 150ms;
     transition-duration: 350ms;
 }
