@@ -4,7 +4,7 @@
 #### I learned about select querys and EventListener.
 
 >var toggledMenu = menuToggle.addEventListener("click", function(){ <span style="color:yellow">//active when click 'menu'</span>
-activeElements.forEach(function(e){
+>>activeElements.forEach(function(e){
      e.classList.toggle("active"); <span style="color:yellow">//apply to all active-elements</span>  
  });  
 });
