@@ -1,4 +1,4 @@
-# Menu-animation
+# Study Log1: Menu-animation
 
 #### I used simple JS code to make animation happends when 'menu' is clicked.
 #### I learned about select querys and EventListener.
